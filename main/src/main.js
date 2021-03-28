@@ -28,21 +28,21 @@ const apps = microApps.map(item => {
 
 registerMicroApps(apps, {
   beforeLoad: app => {
-    console.log('before load app.name====>>>>>', app.name)
+    console.log('mainApp beforeLoad ================', app.name)
   },
   beforeMount: [
     app => {
-      console.log('[LifeCycle] before mount %c%s', 'color: green;', app.name)
+      console.log('mainApp beforeMount ================', app.name)
     }
   ],
   afterMount: [
     app => {
-      console.log('[LifeCycle] after mount %c%s', 'color: green;', app.name)
+      console.log('mainApp afterMount ==================', app.name)
     }
   ],
   afterUnmount: [
     app => {
-      console.log('[LifeCycle] after unmount %c%s', 'color: green;', app.name)
+      console.log('mainApp afterUnmount ==================', app.name)
     }
   ]
 })
